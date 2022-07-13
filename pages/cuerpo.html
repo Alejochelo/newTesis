@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AIFIT BodyType</title>
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+    <header>
+        <nav >
+            <ul class="nav-left-section">
+                <li>
+                    <a href="../index.html">Home</a>
+                </li>
+                <li>
+                    <a href="cuerpo.html">Descubre tu tipo de cuerpo</a>
+                </li>
+                <li>
+                    <a href="dieta.html">Calcula tu dieta</a>
+                </li>
+            </ul>
+        </nav>
+
+    </header>
+
+    <main>
+        <div class="main-container-cuerpo">
+            <section class="main-intro">
+                <h1>Descubre tu tipo de cuerpo</h1>
+                <p>Apunta tu c&aacute;mara hacia tu torso. De las caderas para arriba</p>
+            </section>
+            
+            <section class="video">
+                <div>
+                    <video id="video_frame" playsinline autoplay ></video>
+
+                    <div>
+                        <button id= 'cambiar-camara' class="secondary-button button-cuerpo" onclick="cambiarCamara()">Cambiar camara</button>
+                    </div>
+
+                    <div class="resultado-container">
+                        <div>
+                            <p>Tu tipo de cuerpo es:  </p>
+                        </div>
+        
+                        <div id="resultado-ia"> 
+                            
+                        </div>
+
+                    </div>
+
+                    
+                </div>
+                <div class="video-resized">
+                    <canvas id="canvas_resized" width="200" height="230" ></canvas>
+                    
+                </div>
+            </section>
+            <section>
+                <div class="main-button button-cuerpo">
+                    <a href="dieta.html">
+                        <button>
+                            Continuar 
+                        </button>
+                    </a>
+                    
+                    
+                </div>
+            </section>
+
+        </div>
+        
+
+        
+        <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@2.1.0/dist/tf.min.js"></script>
+        <script src="../js/tipocuerpo.js"></script>
+    </main>
+
+    <footer>
+        <p class="footer-left">Developed by Alejandro Martinez</p>
+        <p class="footer-right">Todos los derechos reservados</p>
+
+    </footer>
+    
+</body>
+</html>
